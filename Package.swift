@@ -5,7 +5,7 @@ import PackageDescription
 let package = Package(
     name: "RichEditorView",
     platforms: [
-        .iOS(.v9_3)
+        .iOS(.v9)
     ],
     products: [
         .library(
@@ -20,14 +20,14 @@ let package = Package(
             dependencies: [],
             path: "RichEditorView/Classes",
             resources: [
-                .process("RichEditorView/Assets/icons"),
-                .process("RichEditorView/Assets/editor")
+                .process("../../RichEditorView/Assets/icons/"),
+                .process("../../RichEditorView/Assets/editor/")
             ]
         ),
         .testTarget(
             name: "RichEditorViewTests",
             dependencies: ["RichEditorView"],
-            path: "Tests"
+            path: "RichEditorViewTests"
         ),
     ],
     swiftLanguageVersions: [.v5]
