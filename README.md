@@ -4,6 +4,9 @@ RichEditorView
 [![Cocoapods](https://img.shields.io/cocoapods/v/RichEditorView.svg)](http://cocoapods.org/pods/RichEditorView)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg)](https://github.com/Carthage/Carthage)
 
+Special thanks to `cjwirth` (Caesar Wirth) for creating this project. The impact of his work on T-Pro has been invaluable. 
+We are committed to maintaining this library and welcome contributions through pull requests.
+
 RichEditorView is a simple, modular, drop-in UIView subclass for Rich Text Editing (`WKWebView` wrapper).
 
 Written in Swift 4.0 (Xcode 11.x)
@@ -49,6 +52,10 @@ Features
 
 Installation
 ------------
+
+### SwiftPM
+
+Add https://github.com/T-Pro/RichEditorView as a Swift Package Repository in Xcode and add `RichEditorView` as a Swift Package to your project.
 
 #### Cocoapods
 
