@@ -18,11 +18,8 @@ let package = Package(
         .target(
             name: "RichEditorView",
             dependencies: [],
-            path: "RichEditorView/Classes",
-            resources: [
-                .process("../../RichEditorView/Assets/icons"),
-                .process("../../RichEditorView/Assets/editor")
-            ]
+            path: "RichEditorView/Sources",
+            resources: [.process("Resources")]
         ),
         .testTarget(
             name: "RichEditorViewTests",
