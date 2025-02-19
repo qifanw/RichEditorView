@@ -150,8 +150,13 @@ private let DefaultInnerLineHeight: Int = 21
         loadRichEditorView()
     }
 
-    private func loadRichEditorView() -> Result<()> {
-        let bundle = Bundle(for: RichEditorView.self)
+    private func loadRichEditorView() {
+        let bundle: Bundle
+    #if SWIFT_PACKAGE
+        bundle = Bundle.module
+    #else
+        bundle = Bundle(for: RichEditorView.self)
+    #endif
         if let filePath = bundle.path(forResource: "rich_editor", ofType: "html") {
             let url = URL(fileURLWithPath: filePath, isDirectory: false)
             webView.loadFileURL(
