@@ -147,11 +147,20 @@ private let DefaultInnerLineHeight: Int = 21
         webView.scrollView.delegate = self
         webView.scrollView.clipsToBounds = false
         addSubview(webView)
-        
-        if let filePath = Bundle(for: RichEditorView.self).path(forResource: "rich_editor", ofType: "html") {
+        loadRichEditorView()
+    }
+
+    private func loadRichEditorView() -> Result<()> {
+        let bundle = Bundle(for: RichEditorView.self)
+        if let filePath = bundle.path(forResource: "rich_editor", ofType: "html") {
             let url = URL(fileURLWithPath: filePath, isDirectory: false)
-            webView.loadFileURL(url, allowingReadAccessTo: url.deletingLastPathComponent())
+            webView.loadFileURL(
+                url, 
+                allowingReadAccessTo: url.deletingLastPathComponent()
+            )
+            return
         }
+        fatalError("Failed to load rich_editor.html, check your dependency configuration")
     }
     
     // MARK: - Rich Text Editing
