@@ -15,6 +15,7 @@
 		39BBCFB71AD0CC7A00A450D2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39BBCFB61AD0CC7A00A450D2 /* Images.xcassets */; };
 		39BBCFBA1AD0CC7A00A450D2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39BBCFB81AD0CC7A00A450D2 /* LaunchScreen.xib */; };
 		39BBCFC61AD0CC7A00A450D2 /* RichEditorViewSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BBCFC51AD0CC7A00A450D2 /* RichEditorViewSampleTests.swift */; };
+		489D890B2D665D7A002076C6 /* RichEditorView in Frameworks */ = {isa = PBXBuildFile; productRef = 489D890A2D665D7A002076C6 /* RichEditorView */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				489D890B2D665D7A002076C6 /* RichEditorView in Frameworks */,
 				0CCBA517EA66E1DE61C19F69 /* Pods_RichEditorViewSample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -173,6 +175,7 @@
 			);
 			name = RichEditorViewSample;
 			packageProductDependencies = (
+				489D890A2D665D7A002076C6 /* RichEditorView */,
 			);
 			productName = RichEditorViewSample;
 			productReference = 39BBCFAA1AD0CC7A00A450D2 /* RichEditorViewSample.app */;
@@ -229,7 +232,7 @@
 			);
 			mainGroup = 39BBCFA11AD0CC7A00A450D2;
 			packageReferences = (
-				48DF0F722D665A36000AF89C /* XCRemoteSwiftPackageReference "RichEditorView" */,
+				48DF0F732D665C8E000AF89C /* XCRemoteSwiftPackageReference "RichEditorView" */,
 			);
 			productRefGroup = 39BBCFAB1AD0CC7A00A450D2 /* Products */;
 			projectDirPath = "";
@@ -535,7 +538,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		48DF0F722D665A36000AF89C /* XCRemoteSwiftPackageReference "RichEditorView" */ = {
+		48DF0F732D665C8E000AF89C /* XCRemoteSwiftPackageReference "RichEditorView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:T-Pro/RichEditorView.git";
 			requirement = {
@@ -544,6 +547,14 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		489D890A2D665D7A002076C6 /* RichEditorView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 48DF0F732D665C8E000AF89C /* XCRemoteSwiftPackageReference "RichEditorView" */;
+			productName = RichEditorView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 39BBCFA21AD0CC7A00A450D2 /* Project object */;
 }
