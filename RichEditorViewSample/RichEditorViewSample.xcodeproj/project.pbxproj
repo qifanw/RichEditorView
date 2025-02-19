@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		39BBCFB71AD0CC7A00A450D2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39BBCFB61AD0CC7A00A450D2 /* Images.xcassets */; };
 		39BBCFBA1AD0CC7A00A450D2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39BBCFB81AD0CC7A00A450D2 /* LaunchScreen.xib */; };
 		39BBCFC61AD0CC7A00A450D2 /* RichEditorViewSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BBCFC51AD0CC7A00A450D2 /* RichEditorViewSampleTests.swift */; };
+		482570952D66235300380D03 /* RichEditorView in Frameworks */ = {isa = PBXBuildFile; productRef = 482570942D66235300380D03 /* RichEditorView */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				482570952D66235300380D03 /* RichEditorView in Frameworks */,
 				0CCBA517EA66E1DE61C19F69 /* Pods_RichEditorViewSample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -166,13 +168,15 @@
 				39BBCFA61AD0CC7A00A450D2 /* Sources */,
 				39BBCFA71AD0CC7A00A450D2 /* Frameworks */,
 				39BBCFA81AD0CC7A00A450D2 /* Resources */,
-				912CF3E5DB1B7FACFF97C026 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = RichEditorViewSample;
+			packageProductDependencies = (
+				482570942D66235300380D03 /* RichEditorView */,
+			);
 			productName = RichEditorViewSample;
 			productReference = 39BBCFAA1AD0CC7A00A450D2 /* RichEditorViewSample.app */;
 			productType = "com.apple.product-type.application";
@@ -201,8 +205,9 @@
 		39BBCFA21AD0CC7A00A450D2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1540;
 				ORGANIZATIONNAME = "Caesar Wirth";
 				TargetAttributes = {
 					39BBCFA91AD0CC7A00A450D2 = {
@@ -226,6 +231,9 @@
 				Base,
 			);
 			mainGroup = 39BBCFA11AD0CC7A00A450D2;
+			packageReferences = (
+				482570932D66235300380D03 /* XCRemoteSwiftPackageReference "RichEditorView" */,
+			);
 			productRefGroup = 39BBCFAB1AD0CC7A00A450D2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -273,24 +281,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		912CF3E5DB1B7FACFF97C026 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RichEditorViewSample/Pods-RichEditorViewSample-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/RichEditorView/RichEditorView.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RichEditorView.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RichEditorViewSample/Pods-RichEditorViewSample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -366,6 +356,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -375,6 +366,7 @@
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -390,7 +382,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -421,6 +413,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -430,6 +423,7 @@
 				COPY_PHASE_STRIP = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -438,10 +432,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -456,7 +451,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = VZRAFDYUBF;
 				INFOPLIST_FILE = RichEditorViewSample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cjwirth.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "RichEditorViewSample/RichEditorViewSample-Bridging-Header.h";
@@ -474,7 +469,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = VZRAFDYUBF;
 				INFOPLIST_FILE = RichEditorViewSample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cjwirth.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "RichEditorViewSample/RichEditorViewSample-Bridging-Header.h";
@@ -541,6 +536,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		482570932D66235300380D03 /* XCRemoteSwiftPackageReference "RichEditorView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:T-Pro/RichEditorView.git";
+			requirement = {
+				branch = feature/swiftpm;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		482570942D66235300380D03 /* RichEditorView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 482570932D66235300380D03 /* XCRemoteSwiftPackageReference "RichEditorView" */;
+			productName = RichEditorView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 39BBCFA21AD0CC7A00A450D2 /* Project object */;
 }
