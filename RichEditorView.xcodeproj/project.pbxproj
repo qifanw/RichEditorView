@@ -176,6 +176,7 @@
 					};
 					FBA6AB031AD3EC9F00721644 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = VZRAFDYUBF;
 						LastSwiftMigration = 0820;
 					};
 				};
@@ -383,6 +384,7 @@
 		FBA6AB131AD3EC9F00721644 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = VZRAFDYUBF;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -402,6 +404,7 @@
 		FBA6AB141AD3EC9F00721644 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = VZRAFDYUBF;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
