@@ -12,7 +12,7 @@ import WebKit
 private let DefaultInnerLineHeight: Int = 21
     
 /// RichEditorDelegate defines callbacks for the delegate of the RichEditorView
-@objc public protocol RichEditorDelegate: class {
+@objc public protocol RichEditorDelegate: AnyObject {
     /// Called when the inner height of the text being displayed changes
     /// Can be used to update the UI
     @objc optional func richEditor(_ editor: RichEditorView, heightDidChange height: Int)
@@ -147,11 +147,25 @@ private let DefaultInnerLineHeight: Int = 21
         webView.scrollView.delegate = self
         webView.scrollView.clipsToBounds = false
         addSubview(webView)
-        
-        if let filePath = Bundle(for: RichEditorView.self).path(forResource: "rich_editor", ofType: "html") {
+        loadRichEditorView()
+    }
+
+    private func loadRichEditorView() {
+        let bundle: Bundle
+    #if SWIFT_PACKAGE
+        bundle = Bundle.module
+    #else
+        bundle = Bundle(for: RichEditorView.self)
+    #endif
+        if let filePath = bundle.path(forResource: "rich_editor", ofType: "html") {
             let url = URL(fileURLWithPath: filePath, isDirectory: false)
-            webView.loadFileURL(url, allowingReadAccessTo: url.deletingLastPathComponent())
+            webView.loadFileURL(
+                url, 
+                allowingReadAccessTo: url.deletingLastPathComponent()
+            )
+            return
         }
+        fatalError("Failed to load rich_editor.html, check your dependency configuration")
     }
     
     // MARK: - Rich Text Editing
