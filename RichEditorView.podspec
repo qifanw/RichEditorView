@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "RichEditorView"
-  s.version          = "4.0"
+  s.version          = "4.0.1"
   s.summary          = "Rich Text Editor for iOS written in Swift"
   s.homepage         = "https://github.com/T-Pro/RichEditorView"
   s.license          = 'BSD 3-clause'
@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.swift_version = '5.0'
   s.requires_arc = true
 
-  s.source_files = 'RichEditorView/Classes/*'
+  s.source_files = 'RichEditorView/Sources/*'
   s.resources = [
       'RichEditorView/Sources/Resources/icons/*',
       'RichEditorView/Sources/Resources/editor/*'
